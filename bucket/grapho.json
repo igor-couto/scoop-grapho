@@ -1,0 +1,35 @@
+{
+    "##": "Source of truth for the Scoop bucket. Copy to bucket/grapho.json in a repository named scoop-grapho.",
+    "version": "0.1.0",
+    "description": "A quiet, local-first document editor that runs in your browser.",
+    "homepage": "https://github.com/igor-couto/grapho",
+    "license": "GPL-3.0-only",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/igor-couto/grapho/releases/download/v0.1.0/grapho-0.1.0-windows-x86_64.zip",
+            "hash": "d2dffead0954c51b0e595295719b9ebcc8c76a1ac0342c351ff6b3ebe7d6ccb6",
+            "extract_dir": "grapho-0.1.0-windows-x86_64"
+        },
+        "arm64": {
+            "url": "https://github.com/igor-couto/grapho/releases/download/v0.1.0/grapho-0.1.0-windows-aarch64.zip",
+            "hash": "494aada7773f57650f7d49d8a732f89861e0d60d484900afb4adf91483639296",
+            "extract_dir": "grapho-0.1.0-windows-aarch64"
+        }
+    },
+    "bin": "grapho.exe",
+    "checkver": {
+        "github": "https://github.com/igor-couto/grapho"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/igor-couto/grapho/releases/download/v$version/grapho-$version-windows-x86_64.zip",
+                "extract_dir": "grapho-$version-windows-x86_64"
+            },
+            "arm64": {
+                "url": "https://github.com/igor-couto/grapho/releases/download/v$version/grapho-$version-windows-aarch64.zip",
+                "extract_dir": "grapho-$version-windows-aarch64"
+            }
+        }
+    }
+}
